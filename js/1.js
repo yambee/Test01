@@ -32,6 +32,10 @@ console.log(j+1);
 
 for (i=0, j={}; i<st.length; i++) {
 	l = j[st[i]];
-	if (l) {l++} else {l=1}	
+	if (j[st[i]]) {
+		j[st[i]]++
+	} else {
+		j[st[i]] = 1
+	}
 };
 console.log(j);
