@@ -30,8 +30,7 @@ console.log(j+1);
 
 // посчитать кол-во каждой из буквы, присутсвующих в строке
 
-for (i=0, j={}; i<st.length; i++) {
-	l = j[st[i]];
+for (i=0, j={}; i<st.length; i++) {	
 	if (j[st[i]]) {
 		j[st[i]]++
 	} else {
