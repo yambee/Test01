@@ -76,6 +76,20 @@ console.log(j);
 // 	<tabTrigger>cl</tabTrigger>	// строка-триггер
 // </snippet>
 
+var w = "";
+var stopCh = [" ",",",".",";"]; // массив стоп-символов
+console.log(stopCh);
+
+for (i=0, j={}; i<st.length; i++) {
+	if (st[i] === " ") {
+		if (j[w]) {j[w]++} else {j[w]=1};
+		w = ""
+	} else {
+		w += st[i]
+	}
+}
+console.log(j);
+
 
 
 
