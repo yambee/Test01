@@ -68,5 +68,14 @@ console.log(j);
 // добавить проверку конца строки
 // испольщовать ф-ю toLowerCase или типа того
 
+// написал сниппет САМ! (Tools -> New snippet..)
+// <snippet>
+// 	<content><![CDATA[
+// console.log(${1});  // то что должно вывестись и куда поставить курсор ${1}
+// ]]></content>
+// 	<tabTrigger>cl</tabTrigger>	// строка-триггер
+// </snippet>
+
+
 
 
