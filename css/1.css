@@ -1,0 +1,12 @@
+#demo {
+	line-height: 30px;
+}
+
+#demo span {
+	font-family: "Tahoma";
+	font-size: 13px;
+	padding: 3px 7px;
+	margin: 15px 3px 0px 0px;
+	background-color: #efefef;
+	border: 1px solid #ccc;
+}

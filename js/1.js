@@ -82,7 +82,7 @@ var w = "";
 // console.log(stopCh);
 
 function isStopCh (ch) {
-	var stopCh = [" ",",",".",";",":","(",")","'"]; // массив стоп-символов
+	var stopCh = [" ",",",".",";",":","(",")","'","[","]"]; // массив стоп-символов
 	stopCh.push('"'); // отдельно добавляем к массиву двойные кавычки
 	for (var i = 0; i < stopCh.length; i++) {
 		if (ch === stopCh[i]) {return true; break} // ch стопсимвол, выходим из лупа с true
@@ -102,3 +102,11 @@ for (i=0, j={}; i <= st.length; i++) {
 delete j[""]; // удалим лишний пустой атрибут (это побочный продукт цикла)
 console.log(j);
 
+// сортировка и вывод атрибутов массива слов
+var htmlOut = "";
+for (prop in j) { // цикл по названиям атрибутов объекта и его прототипов(!)
+	if (j.hasOwnProperty(prop)) { // prop - собственный атрибут объекта?
+		htmlOut += ("<span>"+prop+":&nbsp"+j[prop]+"</span> ") // склеиваем в html
+	}
+}
+document.getElementById("demo").innerHTML = htmlOut; // выводим в HTML
