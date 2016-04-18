@@ -100,13 +100,20 @@ for (i=0, j={}; i <= st.length; i++) {
 	}
 }
 delete j[""]; // удалим лишний пустой атрибут (это побочный продукт цикла)
-console.log(j);
 
 // сортировка и вывод атрибутов массива слов
+
 var htmlOut = "";
+words = [];
 for (prop in j) { // цикл по названиям атрибутов объекта и его прототипов(!)
 	if (j.hasOwnProperty(prop)) { // prop - собственный атрибут объекта?
-		htmlOut += ("<span>"+prop+":&nbsp"+j[prop]+"</span> ") // склеиваем в html
+		words.push(prop); // добавляем его в массив к словам
 	}
 }
+words = words.sort(); // сортируем полученный массив слов
+for (i=0; i<words.length; i++) {
+	htmlOut += ("<span>"+words[i]+":&nbsp"+j[words[i]]+"</span> ") // склеиваем в html
+}
 document.getElementById("demo").innerHTML = htmlOut; // выводим в HTML
+
+
