@@ -82,7 +82,7 @@ var w = "";
 // console.log(stopCh);
 
 function isStopCh (ch) {
-	var stopCh = [" ",",",".",";",":"]; // массив стоп-символов
+	var stopCh = [" ",",",".",";",":","(",")"]; // массив стоп-символов
 	for (var i = 0; i < stopCh.length; i++) {
 		if (ch === stopCh[i]) {return true; break} // ch стопсимвол, выходим из лупа с true
 	};
